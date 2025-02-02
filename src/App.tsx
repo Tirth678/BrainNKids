@@ -10,7 +10,7 @@ import CourseDetails from './components/CourseDetails';
 export const courses = [
   {
     id: 'abacus',
-    title: 'Abacus Mental Arithmetic',
+    title: 'Abacus Arithmetic',
     description: 'Develop lightning-fast calculation skills and enhance mental math abilities through our proven abacus training program.',
     icon: Brain,
     levels: 2,
