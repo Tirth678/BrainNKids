@@ -75,7 +75,8 @@ export const courses = [
       'Story structure',
       'Essay writing'
     ],
-    detailedDescription: 'Writing Champ helps students develop strong writing skills through a combination of creative exercises and structured learning. From basic sentence construction to complex essay writing, students learn to express their ideas clearly and effectively.',
+    detailedDescription: `Unlock the artistry of cursive handwriting with our expert-led course.
+    Experience fluidity and elegance in your writing. Our Handwriting course improves fine motor skills and cognitive function.`,
     programLevels: [
       'Sentence Building & Basic Grammar',
       'Paragraph Writing & Creative Expression'
@@ -95,7 +96,9 @@ export const courses = [
       'Presentation abilities',
       'Confidence building'
     ],
-    detailedDescription: 'Our English Communication program focuses on developing essential speaking and listening skills through interactive activities. Students gain confidence in expressing themselves while learning proper pronunciation, intonation, and public speaking techniques.',
+    detailedDescription: `The English Speaking Course for children aims at making the child understand and learn the language, and most importantly confidently
+  speak the language. To help a child overcome their hesitation and become fluent in the language. We have designed a course for young learners which focuses on the usage of various grammar
+  rules to help speak English correctly with confidence.`,
     programLevels: [
       'Basic Communication & Listening Skills',
       'Intermediate Speaking & Presentation'
