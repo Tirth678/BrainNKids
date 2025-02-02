@@ -29,6 +29,8 @@ export const courses = [
     Our Abacus Mental Arithmetic program is meticulously designed to foster whole brain development in children aged 4 to
     14. By stimulating both hemispheres of the brain, this course enhances fundamental skills including addition, subtraction, multiplication, and division.
     Through the manipulation of beads, students develop a visual representation of mathematical problems, leading to the cultivation of a photographic memory.
+    With consistent practice, students learn
+    to solve problems effortlessly, ultimately honing their cognitive abilities without reliance on external aids such as the abacus.
     `,
     programLevels: [
       'Basic Operations & Number Recognition',
@@ -38,8 +40,7 @@ export const courses = [
   {
     id: 'phonics',
     title: 'Phonics Smart',
-    description: `The "Brain N' Kids" phonics course helps kids aged 4 to 7 learn sounds and letters. It focuses on understanding unknown words and teaches 44 different sounds. The course improves reading skills using fun activities, games, and flashcards. By
-    using audio-visual methods, it makes learning engaging and effective, boosting kids' confidence in reading. Without phonics instruction, many students may struggle with reading and encounter difficulties in comprehension. Phonics course also plays a crucial role in fostering early literacy skills, which are essential for academic success and lifelong learning.`,
+    description: `Phonics course also plays a crucial role in fostering early literacy skills, which are essential for academic success and lifelong learning.`,
     icon: Speech,
     levels: 2,
     ageGroup: '4-8 years',
@@ -52,7 +53,9 @@ export const courses = [
       'R-controlled Words',
       'Diphongs and Blending Words'
     ],
-    detailedDescription: 'Phonics Smart is a structured literacy program that teaches children to read and write effectively by understanding the relationship between letters and sounds. Through engaging activities and systematic instruction, children build a strong foundation in reading and spelling.',
+    detailedDescription: `
+    The "Brain N' Kids" phonics course helps kids aged 4 to 7 learn sounds and letters. It focuses on understanding unknown words and teaches 44 different sounds. The course improves reading skills using fun activities, games, and flashcards. By
+    using audio-visual methods, it makes learning engaging and effective, boosting kids' confidence in reading. Without phonics instruction, many students may struggle with reading and encounter difficulties in comprehension. Phonics course also plays a crucial role in fostering early literacy skills, which are essential for academic success and lifelong learning.`,
     programLevels: [
       'Letter Recognition & Basic Phonics',
       'Blending Sounds & Sight Words'
