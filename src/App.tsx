@@ -41,7 +41,7 @@ export const courses = [
     title: 'Phonics Smart',
     description: `Phonics course also plays a crucial role in fostering early literacy skills, which are essential for academic success and lifelong learning.`,
     icon: Speech,
-    levels: 2,
+    levels: 1,
     ageGroup: '4-7 years',
     skills: [
       'Alphabet Sounds',
@@ -65,7 +65,7 @@ export const courses = [
     title: 'Writing Champ',
     description: 'Transform your child into a confident writer with our structured writing program.',
     icon: PenTool,
-    levels: 2,
+    levels: 1,
     ageGroup: '6-20 years',
     skills: [
       'Creative writing',
