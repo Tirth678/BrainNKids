@@ -128,7 +128,7 @@ export const courses = [
     id: 'dmit',
     title: 'Dmit Report',
     description: 'Expand your word power and enhance language skills with our vocabulary program.',
-    icon: Report,
+    icon: BookOpen,
     levels: 2,
     ageGroup: '4+ years',
     skills: [
