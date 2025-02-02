@@ -13,8 +13,8 @@ export const courses = [
     title: 'Abacus Mental Arithmetic',
     description: 'Develop lightning-fast calculation skills and enhance mental math abilities through our proven abacus training program.',
     icon: Brain,
-    levels: 1,
-    ageGroup: '5-15 years',
+    levels: 2,
+    ageGroup: '4-7 years',
     skills: [
       'Visualization',
       'Photographic Memory',
@@ -34,7 +34,6 @@ export const courses = [
     `,
     programLevels: [
       'Basic Operations & Number Recognition',
-      'Addition & Subtraction Mastery'
     ]
   },
   {
@@ -43,7 +42,7 @@ export const courses = [
     description: `Phonics course also plays a crucial role in fostering early literacy skills, which are essential for academic success and lifelong learning.`,
     icon: Speech,
     levels: 2,
-    ageGroup: '4-8 years',
+    ageGroup: '4-7 years',
     skills: [
       'Alphabet Sounds',
       'CVC Words',
@@ -67,7 +66,7 @@ export const courses = [
     description: 'Transform your child into a confident writer with our structured writing program.',
     icon: PenTool,
     levels: 2,
-    ageGroup: '7-14 years',
+    ageGroup: '6-20 years',
     skills: [
       'Creative writing',
       'Grammar mastery',
@@ -88,7 +87,7 @@ export const courses = [
     description: 'Build strong communication skills through interactive speaking and listening exercises.',
     icon: MessageSquare,
     levels: 2,
-    ageGroup: '6-15 years',
+    ageGroup: '6-14 years',
     skills: [
       'Speaking',
       'Reading',

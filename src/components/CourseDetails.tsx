@@ -89,7 +89,7 @@ const CourseDetails = ({ courses }: CourseDetailsProps) => {
               <div className="grid gap-4">
                 {course.programLevels.map((level, index) => (
                   <div key={index} className="bg-gray-900 p-4 rounded-lg border border-gray-700">
-                    <h3 className="font-semibold text-purple-400">Level {index + 1}</h3>
+                    <h3 className="font-semibold text-purple-400">Level</h3>
                     <p className="text-gray-300">{level}</p>
                   </div>
                 ))}

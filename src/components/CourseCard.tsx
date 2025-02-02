@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Link } from 'react-router-dom';
 import { DivideIcon as LucideIcon } from 'lucide-react';
 
@@ -6,7 +6,7 @@ interface CourseCardProps {
   id: string;
   title: string;
   description: string;
-  icon: LucideIcon;
+  icon: React.ComponentType<{ className?: string }>;
 }
 
 const CourseCard = ({ id, title, description, icon: Icon }: CourseCardProps) => {
