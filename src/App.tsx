@@ -123,6 +123,28 @@ export const courses = [
       'Basic Vocabulary & Word Recognition',
       'Word Usage & Context Understanding'
     ]
+  },
+  {
+    id: 'dmit',
+    title: 'Dmit Report',
+    description: 'Expand your word power and enhance language skills with our vocabulary program.',
+    icon: BookOpen,
+    levels: 2,
+    ageGroup: '4+ years',
+    skills: [
+      'Word recognition',
+      'Context understanding',
+      'Word usage',
+      'Reading comprehension',
+      'Language fluency'
+    ],
+    detailedDescription: `DMIT helps in understanding the different area of your brain that are over and under emphasized.
+It understands your child's innate personality that will be beneficial for the future.
+This also identifies the strengths and weakness of a particular person.`,
+    programLevels: [
+      'Basic Vocabulary & Word Recognition',
+      'Word Usage & Context Understanding'
+    ]
   }
 ];
 
