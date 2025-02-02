@@ -29,8 +29,6 @@ export const courses = [
     Our Abacus Mental Arithmetic program is meticulously designed to foster whole brain development in children aged 4 to
     14. By stimulating both hemispheres of the brain, this course enhances fundamental skills including addition, subtraction, multiplication, and division.
     Through the manipulation of beads, students develop a visual representation of mathematical problems, leading to the cultivation of a photographic memory.
-    With consistent practice, students learn
-    to solve problems effortlessly, ultimately honing their cognitive abilities without reliance on external aids such as the abacus.
     `,
     programLevels: [
       'Basic Operations & Number Recognition',
