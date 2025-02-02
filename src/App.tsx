@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { BookOpen, Brain, MessageSquare, PenTool, Speech } from 'lucide-react';
 import Navbar from './components/Navbar';
@@ -10,7 +10,7 @@ import CourseDetails from './components/CourseDetails';
 export const courses = [
   {
     id: 'abacus',
-    title: 'Abacus Arithmetic',
+    title: 'Abacus Mental Arithmetic',
     description: 'Develop lightning-fast calculation skills and enhance mental math abilities through our proven abacus training program.',
     icon: Brain,
     levels: 2,
