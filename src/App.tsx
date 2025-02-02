@@ -13,7 +13,7 @@ export const courses = [
     title: 'Abacus Mental Arithmetic',
     description: 'Develop lightning-fast calculation skills and enhance mental math abilities through our proven abacus training program.',
     icon: Brain,
-    levels: 2,
+    levels: 1,
     ageGroup: '5-15 years',
     skills: [
       'Visualization',
@@ -90,11 +90,13 @@ export const courses = [
     levels: 2,
     ageGroup: '6-15 years',
     skills: [
-      'Public speaking',
-      'Active listening',
-      'Conversation skills',
-      'Presentation abilities',
-      'Confidence building'
+      'Speaking',
+      'Reading',
+      'Writing',
+      'Listening',
+      'Grammer',
+      'Pronunciation',
+      'Vocabulary'
     ],
     detailedDescription: `The English Speaking Course for children aims at making the child understand and learn the language, and most importantly confidently
   speak the language. To help a child overcome their hesitation and become fluent in the language. We have designed a course for young learners which focuses on the usage of various grammar
@@ -180,9 +182,11 @@ function App() {
                 <div className="md:w-1/2">
                   <h2 className="text-4xl font-bold mb-6 text-white">About Brain N Kids</h2>
                   <p className="text-gray-300 mb-6">
-                    At Brain N Kids, we believe in nurturing young minds through innovative educational programs. 
-                    Our mission is to develop well-rounded individuals equipped with essential skills for academic 
-                    and personal success.
+                  At Brain N' Kids, our mission is to unlock the hidden potentials of the younger generation through comprehensive brain training with Abacus and Language programs grounded in phonics learning. We strive to cultivate academic excellence, critical thinking, and self-assurance in our students, empowering them to excel in all aspects of life.
+                   Brain N' Kids incorporated in year 2017. It's ISO 9001:2015
+                  certified company and registered for trademark.
+                   Brain N' Kids is a professionally managed educational institution specializing in internationally accredited Brain Development courses such as Abacus, English Improvement programs like Phonics and English Grammar, and cursive handwriting courses.
+                   We pride ourselves on our team of highly trained, certified educators, whose extensive experience, expertise, and unwavering commitment to student development ensure exceptional learning outcomes. With a personalized approach tailored to individual needs, our teachers foster holistic growth and academic success.
                   </p>
                   <div className="grid grid-cols-2 gap-4">
                     <div className="flex items-center gap-2 text-gray-300">
