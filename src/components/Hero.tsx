@@ -5,7 +5,7 @@ const Hero = () => {
     <div className="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen">
       <div className="absolute top-0 w-full h-full bg-center bg-cover"
            style={{
-             backgroundImage: "url('https://raw.githubusercontent.com/Tirth678/BrainNKids/refs/heads/main/src/assets/DALL%C2%B7E%202025-02-02%2019.22.50%20-%20A%20cheerful%20and%20playful%20scene%20of%20children%20having%20fun%20outdoors%20in%20a%20vibrant%20park.%20The%20setting%20includes%20green%20grass%2C%20trees%2C%20and%20a%20bright%20blue%20sky%20on%20a%20su.webp')"
+             backgroundImage: "url(https://images.unsplash.com/photo-1735596365888-ad6d151533f2?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)"
            }}>
         <span className="w-full h-full absolute opacity-75 bg-black"></span>
       </div>

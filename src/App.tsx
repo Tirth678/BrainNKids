@@ -86,7 +86,7 @@ export const courses = [
     title: 'English Communication',
     description: 'Build strong communication skills through interactive speaking and listening exercises.',
     icon: MessageSquare,
-    levels: 2,
+    levels: 1,
     ageGroup: '6-14 years',
     skills: [
       'Speaking',
@@ -110,7 +110,7 @@ export const courses = [
     title: 'Vocabulary Building',
     description: 'Expand your word power and enhance language skills with our vocabulary program.',
     icon: BookOpen,
-    levels: 2,
+    levels: 1,
     ageGroup: '8-15 years',
     skills: [
       'Word recognition',
@@ -130,7 +130,7 @@ export const courses = [
     title: 'Dmit Report',
     description: 'Expand your word power and enhance language skills with our vocabulary program.',
     icon: BookOpen,
-    levels: 2,
+    levels: 1,
     ageGroup: '4+ years',
     skills: [
       'Word recognition',
