@@ -153,7 +153,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={
-        <div className="min-h-screen bg-gray-900">
+        <div className="min-h-screen bg-white">
           <Navbar />
           <Hero />
           
@@ -203,9 +203,9 @@ function App() {
           </section>
 
           {/* Contact Section */}
-          <section id="contact" className="py-20 bg-gray-900">
+          <section id="contact" className="py-20 bg-white">
             <div className="max-w-7xl mx-auto px-4">
-              <h2 className="text-4xl font-bold text-center mb-12 text-white">Contact Us</h2>
+              <h2 className="text-4xl font-bold text-center mb-12 text-black">Contact Us</h2>
               <ContactForm />
             </div>
           </section>
