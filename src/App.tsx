@@ -1,8 +1,9 @@
-// import React from 'react';
+import React from 'react'; // Uncommented the import statement
 import { Routes, Route } from 'react-router-dom';
-import { BookOpen, Brain, MessageSquare, PenTool, Speech } from 'lucide-react';
+import { BookOpen, MessageSquare, PenTool, Speech, Brain } from 'lucide-react'; // Added Brain import
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import logo from '../src/assets/WhatsApp Image 2025-02-03 at 10.01.22.jpeg';
 import CourseCard from './components/CourseCard';
 import ContactForm from './components/ContactForm';
 import CourseDetails from './components/CourseDetails';
@@ -93,7 +94,7 @@ export const courses = [
       'Reading',
       'Writing',
       'Listening',
-      'Grammer',
+      'Grammar', // Fixed typo from 'Grammer' to 'Grammar'
       'Pronunciation',
       'Vocabulary'
     ],
@@ -168,7 +169,7 @@ function App() {
           </section>
 
           {/* About Section */}
-          <section id="about" className="py-20 bg-gray-800">
+          <section id="about" className="py-20 bg-white">
             <div className="max-w-7xl mx-auto px-4">
               <div className="flex flex-col md:flex-row items-center gap-12">
                 <div className="md:w-1/2">
@@ -179,8 +180,8 @@ function App() {
                   />
                 </div>
                 <div className="md:w-1/2">
-                  <h2 className="text-4xl font-bold mb-6 text-white">About Brain N Kids</h2>
-                  <p className="text-gray-300 mb-6">
+                  <h2 className="text-4xl font-bold mb-6 text-black">About Brain N Kids</h2>
+                  <p className="text-black mb-6">
                   At Brain N' Kids, our mission is to unlock the hidden potentials of the younger generation through comprehensive brain training with Abacus and Language programs grounded in phonics learning. We strive to cultivate academic excellence, critical thinking, and self-assurance in our students, empowering them to excel in all aspects of life.
                    Brain N' Kids incorporated in year 2017. It's ISO 9001:2015
                   certified company and registered for trademark.
@@ -188,11 +189,11 @@ function App() {
                    We pride ourselves on our team of highly trained, certified educators, whose extensive experience, expertise, and unwavering commitment to student development ensure exceptional learning outcomes. With a personalized approach tailored to individual needs, our teachers foster holistic growth and academic success.
                   </p>
                   <div className="grid grid-cols-2 gap-4">
-                    <div className="flex items-center gap-2 text-gray-300">
+                    <div className="flex items-center gap-2 text-black">
                       <Brain className="text-purple-400" />
                       <span>Expert Teachers</span>
                     </div>
-                    <div className="flex items-center gap-2 text-gray-300">
+                    <div className="flex items-center gap-2 text-black">
                       <MessageSquare className="text-purple-400" />
                       <span>Small Class Sizes</span>
                     </div>
