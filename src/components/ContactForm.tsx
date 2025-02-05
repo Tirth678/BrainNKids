@@ -99,23 +99,23 @@ const ContactForm = () => {
         <h3 className="text-2xl font-bold text-center text-white mb-6">Our Branches</h3>
         <div className="space-y-4">
           <div className="text-center">
-            <p className="text-lg font-semibold text-purple-400">MANJALPUR</p>
+            <p className="text-lg font-semibold text-red-500">MANJALPUR</p>
             <p className="text-gray-300">99785 84763</p>
           </div>
           <div className="text-center">
-            <p className="text-lg font-semibold text-purple-400">MANEJA</p>
+            <p className="text-lg font-semibold text-red-500">MANEJA</p>
             <p className="text-gray-300">87580 43853</p>
           </div>
           <div className="text-center">
-            <p className="text-lg font-semibold text-purple-400">KALALI ROAD</p>
+            <p className="text-lg font-semibold text-red-500">KALALI ROAD</p>
             <p className="text-gray-300">95129 65413</p>
           </div>
           <div className="text-center">
-            <p className="text-lg font-semibold text-purple-400">KHODIYAR NAGAR</p>
+            <p className="text-lg font-semibold text-red-500">KHODIYAR NAGAR</p>
             <p className="text-gray-300">93282 09462</p>
           </div>
           <div className="text-center">
-            <p className="text-lg font-semibold text-purple-400">WAGHODIA ROAD</p>
+            <p className="text-lg font-semibold text-red-500">WAGHODIA ROAD</p>
             <p className="text-gray-300">95103 85760</p>
           </div>
         </div>

@@ -28,7 +28,7 @@ const CourseDetails = ({ courses }: CourseDetailsProps) => {
         <Navbar />
         <div className="pt-24 px-4 text-center">
           <h1 className="text-2xl font-bold text-white">Course not found</h1>
-          <Link to="/" className="text-purple-400 hover:text-purple-300 mt-4 inline-block">
+          <Link to="/" className="text-red-500 hover:text-red-500 mt-4 inline-block">
             Return to Home
           </Link>
         </div>
@@ -44,14 +44,14 @@ const CourseDetails = ({ courses }: CourseDetailsProps) => {
       
       <div className="pt-24 pb-16">
         <div className="max-w-4xl mx-auto px-4">
-          <Link to="/" className="text-purple-400 hover:text-purple-300 mb-6 inline-block">
+          <Link to="/" className="text-red-400 hover:text-red-300 mb-6 inline-block">
             ← Back to Programs
           </Link>
           
           <div className="bg-gray-800 rounded-lg shadow-lg p-8 border border-gray-700">
             <div className="flex items-center gap-4 mb-6">
-              <div className="w-16 h-16 bg-purple-900 rounded-lg flex items-center justify-center">
-                <Icon className="h-8 w-8 text-purple-400" />
+              <div className="w-16 h-16 bg-red-900 rounded-lg flex items-center justify-center">
+                <Icon className="h-8 w-8 text-red-400" />
               </div>
               <h1 className="text-3xl font-bold text-white">{course.title}</h1>
             </div>
@@ -62,7 +62,7 @@ const CourseDetails = ({ courses }: CourseDetailsProps) => {
                 <p className="text-gray-300">{course.ageGroup}</p>
               </div>
               <div className="bg-gray-900 p-4 rounded-lg border border-gray-700">
-                <h3 className="font-semibold text-purple-400">Total Levels</h3>
+                <h3 className="font-semibold text-red-400">Total Levels</h3>
                 <p className="text-gray-300">{course.levels} Levels</p>
               </div>
             </div>
@@ -99,7 +99,7 @@ const CourseDetails = ({ courses }: CourseDetailsProps) => {
             <div className="mt-8 text-center">
               <Link
                 to="/#contact"
-                className="bg-purple-600 text-white px-8 py-3 rounded-md hover:bg-purple-700 transition-colors inline-block"
+                className="bg-red-600 text-white px-8 py-3 rounded-md hover:bg-purple-700 transition-colors inline-block"
               >
                 Enroll Now
               </Link>
