@@ -13,7 +13,7 @@ const Hero = () => {
         <div className="items-center flex flex-wrap">
           <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
             <div className="text-white">
-              <h1 className="text-5xl font-semibold leading-tight">
+              <h1 className="text-5xl font-semibold leading-tight text-red-600">
                 Unlock Your Child's Potential
               </h1>
               <p className="mt-4 text-lg text-gray-300">
