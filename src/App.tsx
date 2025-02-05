@@ -82,50 +82,8 @@ export const courses = [
       'Paragraph Writing & Creative Expression'
     ]
   },
-  {
-    id: 'communication',
-    title: 'English Communication',
-    description: 'Build strong communication skills through interactive speaking and listening exercises.',
-    icon: MessageSquare,
-    levels: 1,
-    ageGroup: '6-14 years',
-    skills: [
-      'Speaking',
-      'Reading',
-      'Writing',
-      'Listening',
-      'Grammar', // Fixed typo from 'Grammer' to 'Grammar'
-      'Pronunciation',
-      'Vocabulary'
-    ],
-    detailedDescription: `The English Speaking Course for children aims at making the child understand and learn the language, and most importantly confidently
-  speak the language. To help a child overcome their hesitation and become fluent in the language. We have designed a course for young learners which focuses on the usage of various grammar
-  rules to help speak English correctly with confidence.`,
-    programLevels: [
-      'Basic Communication & Listening Skills',
-      'Intermediate Speaking & Presentation'
-    ]
-  },
-  {
-    id: 'vocabulary',
-    title: 'Vocabulary Building',
-    description: 'Expand your word power and enhance language skills with our vocabulary program.',
-    icon: BookOpen,
-    levels: 1,
-    ageGroup: '8-15 years',
-    skills: [
-      'Word recognition',
-      'Context understanding',
-      'Word usage',
-      'Reading comprehension',
-      'Language fluency'
-    ],
-    detailedDescription: 'The Vocabulary Building program helps students expand their English vocabulary through systematic learning of new words, their meanings, and usage. Students learn to use words effectively in different contexts while improving their reading and writing abilities.',
-    programLevels: [
-      'Basic Vocabulary & Word Recognition',
-      'Word Usage & Context Understanding'
-    ]
-  },
+  
+ 
   {
     id: 'dmit',
     title: 'Dmit Report',
@@ -212,9 +170,9 @@ function App() {
           </section>
 
           {/* Footer */}
-          <footer className="bg-black text-gray-400 py-8">
+          <footer className="bg-white text-black py-8">
             <div className="max-w-7xl mx-auto px-4 text-center">
-              <p>© 2024 Brain N Kids. All rights reserved.</p>
+              <p>© 2024 Brain N Kids. All rights reserved. T&Cs applied.</p>
             </div>
           </footer>
         </div>
