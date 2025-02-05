@@ -39,13 +39,13 @@ const Navbar = () => {
         {isOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <a href="#courses" className="block px-3 py-2 text-black hover:text-purple-400">
+              <a href="#courses" className="block px-3 py-2 text-black hover:text-red-400">
                 Courses
               </a>
-              <a href="#about" className="block px-3 py-2 text-black hover:text-purple-400">
+              <a href="#about" className="block px-3 py-2 text-black hover:text-red-400">
                 About
               </a>
-              <a href="#contact" className="block px-3 py-2 text-black hover:text-purple-400">
+              <a href="#contact" className="block px-3 py-2 text-black hover:text-red-400">
                 Contact Us
               </a>
             </div>

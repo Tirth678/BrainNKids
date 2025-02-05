@@ -22,7 +22,7 @@ const Hero = () => {
               </p>
               <a
                 href="#contact"
-                className="bg-red-600 text-white mt-8 inline-block px-6 py-3 rounded-md hover:bg-purple-700 transition-colors"
+                className="bg-red-600 text-white mt-8 inline-block px-6 py-3 rounded-md hover:bg-red-800 transition-colors"
               >
                 Get Started Today
               </a>

@@ -190,11 +190,11 @@ function App() {
                   </p>
                   <div className="grid grid-cols-2 gap-4">
                     <div className="flex items-center gap-2 text-black">
-                      <Brain className="text-purple-400" />
+                      <Brain className="text-red-400" />
                       <span>Expert Teachers</span>
                     </div>
                     <div className="flex items-center gap-2 text-black">
-                      <MessageSquare className="text-purple-400" />
+                      <MessageSquare className="text-red-400" />
                       <span>Small Class Sizes</span>
                     </div>
                   </div>

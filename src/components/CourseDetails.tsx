@@ -58,7 +58,7 @@ const CourseDetails = ({ courses }: CourseDetailsProps) => {
 
             <div className="grid grid-cols-2 gap-4 mb-8">
               <div className="bg-gray-900 p-4 rounded-lg border border-gray-700">
-                <h3 className="font-semibold text-purple-400">Age Group</h3>
+                <h3 className="font-semibold text-red-400">Age Group</h3>
                 <p className="text-gray-300">{course.ageGroup}</p>
               </div>
               <div className="bg-gray-900 p-4 rounded-lg border border-gray-700">
@@ -77,7 +77,7 @@ const CourseDetails = ({ courses }: CourseDetailsProps) => {
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {course.skills.map((skill, index) => (
                   <li key={index} className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                    <div className="w-2 h-2 bg-red-400 rounded-full"></div>
                     <span className="text-gray-300">{skill}</span>
                   </li>
                 ))}
@@ -89,7 +89,7 @@ const CourseDetails = ({ courses }: CourseDetailsProps) => {
               <div className="grid gap-4">
                 {course.programLevels.map((level, index) => (
                   <div key={index} className="bg-gray-900 p-4 rounded-lg border border-gray-700">
-                    <h3 className="font-semibold text-purple-400">Level</h3>
+                    <h3 className="font-semibold text-red-400">Level</h3>
                     <p className="text-gray-300">{level}</p>
                   </div>
                 ))}
@@ -99,7 +99,7 @@ const CourseDetails = ({ courses }: CourseDetailsProps) => {
             <div className="mt-8 text-center">
               <Link
                 to="/#contact"
-                className="bg-red-600 text-white px-8 py-3 rounded-md hover:bg-purple-700 transition-colors inline-block"
+                className="bg-red-600 text-white px-8 py-3 rounded-md hover:bg-red-700 transition-colors inline-block"
               >
                 Enroll Now
               </Link>
