@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { BookOpen, MessageSquare, PenTool, Speech, Brain } from 'lucide-react';
+import { BookOpen, PenTool, Speech, Brain } from 'lucide-react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import CourseCard from './components/CourseCard';
@@ -82,8 +82,6 @@ export const courses = [
       'Paragraph Writing & Creative Expression'
     ]
   },
-  
- 
   {
     id: 'dmit',
     title: 'Dmit Report',
@@ -110,6 +108,7 @@ This also identifies the strengths and weakness of a particular person.`,
 
 function App() {
   const [isEnrollmentOpen, setIsEnrollmentOpen] = useState(false);
+  const [isContactFormOpen, setIsContactFormOpen] = useState(false);
 
   useEffect(() => {
     setIsEnrollmentOpen(true); // Open the enrollment popup on page load
@@ -143,7 +142,13 @@ function App() {
           <section id="contact" className="py-20 bg-white">
             <div className="max-w-7xl mx-auto px-4">
               <h2 className="text-4xl font-bold text-center mb-12 text-black">Contact Us</h2>
-              <ContactForm />
+              <button 
+                onClick={() => setIsContactFormOpen(true)} 
+                className="mx-auto block bg-red-600 text-white py-2 px-2 rounded-md hover:bg-red-700 transition-colors"
+              >
+                Open Contact Form
+              </button>
+              {isContactFormOpen && <ContactForm />}
             </div>
           </section>
 
@@ -153,12 +158,8 @@ function App() {
               <p>© 2024 Brain N Kids. All rights reserved. T&Cs applied.</p>
             </div>
           </footer>
-
-          {/* Enrollment Popup */}
-          <EnrollmentPopup isOpen={isEnrollmentOpen} onClose={() => setIsEnrollmentOpen(false)} />
         </div>
       } />
-      <Route path="/course/:courseId" element={<CourseDetails courses={courses} />} />
     </Routes>
   );
 }

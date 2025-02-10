@@ -14,7 +14,10 @@ const EnrollmentPopup = ({ isOpen, onClose, courseId }: EnrollmentPopupProps) =>
     age: '',
     sex: 'male',
     fatherName: '',
+    email: '',
     mobile: '',
+    mobile2: '',
+    class: '',
     address: ''
   });
 
@@ -29,7 +32,10 @@ const EnrollmentPopup = ({ isOpen, onClose, courseId }: EnrollmentPopupProps) =>
       age: '',
       sex: 'male',
       fatherName: '',
+      email: '',
       mobile: '',
+      mobile2: '',
+      class: '',
       address: ''
     });
     onClose();
@@ -58,22 +64,89 @@ const EnrollmentPopup = ({ isOpen, onClose, courseId }: EnrollmentPopupProps) =>
         </button>
         
         <div className="p-6">
-          <h2 className="text-2xl font-bold text-white mb-6">Student Enrollment</h2>
+          <h2 className="text-2xl font-bold text-white mb-6">Book a FREE 3 days Demo Class and Level Test</h2>
+          
+          <div>
+            <label htmlFor="studentName" className="block text-sm font-medium text-gray-300">
+              Name*
+            </label>
+            <input
+              type="text"
+              id="studentName"
+              name="studentName"
+              value={formData.studentName}
+              onChange={handleChange}
+              className="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white shadow-sm focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50"
+              required
+            />
+            <br />
+          </div>
+
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium text-gray-300">
+              Email Id*
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              className="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white shadow-sm focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50"
+              required
+            />
+            <br />
+          </div>
+
+          <div>
+            <label htmlFor="mobile" className="block text-sm font-medium text-gray-300">
+              India (+91) Mobile Number 1*
+            </label>
+            <input
+              type="tel"
+              id="mobile"
+              name="mobile"
+              value={formData.mobile}
+              onChange={handleChange}
+              className="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white shadow-sm focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50"
+              required
+            />
+            <br />
+          </div>
+
+          <div>
+            <label htmlFor="mobile2" className="block text-sm font-medium text-gray-300">
+              India (+91) Mobile Number 2
+            </label>
+            <input
+              type="tel"
+              id="mobile2"
+              name="mobile2"
+              value={formData.mobile2}
+              onChange={handleChange}
+              className="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white shadow-sm focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50"
+            />
+            < br />
+          </div>
+
+          <div>
+            <label htmlFor="class" className="block text-sm font-medium text-gray-300">
+              Student's Class
+            </label>
+            <input
+              type="text"
+              id="class"
+              name="class"
+              value={formData.class}
+              onChange={handleChange}
+              className="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white shadow-sm focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50"
+              required
+            />
+            
+          </div>
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label htmlFor="studentName" className="block text-sm font-medium text-gray-300">
-                Student Name
-              </label>
-              <input
-                type="text"
-                id="studentName"
-                name="studentName"
-                value={formData.studentName}
-                onChange={handleChange}
-                className="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white shadow-sm focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50"
-                required
-              />
             </div>
 
             <div className="grid grid-cols-2 gap-4">
@@ -111,48 +184,13 @@ const EnrollmentPopup = ({ isOpen, onClose, courseId }: EnrollmentPopupProps) =>
             </div>
 
             <div>
-              <label htmlFor="fatherName" className="block text-sm font-medium text-gray-300">
-                Father's Name
-              </label>
-              <input
-                type="text"
-                id="fatherName"
-                name="fatherName"
-                value={formData.fatherName}
-                onChange={handleChange}
-                className="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white shadow-sm focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50"
-                required
-              />
             </div>
 
             <div>
-              <label htmlFor="mobile" className="block text-sm font-medium text-gray-300">
-                Mobile Number
-              </label>
-              <input
-                type="tel"
-                id="mobile"
-                name="mobile"
-                value={formData.mobile}
-                onChange={handleChange}
-                className="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white shadow-sm focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50"
-                required
-              />
             </div>
 
             <div>
-              <label htmlFor="address" className="block text-sm font-medium text-gray-300">
-                Address
-              </label>
-              <textarea
-                id="address"
-                name="address"
-                value={formData.address}
-                onChange={handleChange}
-                rows={3}
-                className="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white shadow-sm focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50"
-                required
-              ></textarea>
+              
             </div>
 
             <button
