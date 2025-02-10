@@ -87,7 +87,7 @@ const EnrollmentPopup = ({ isOpen, onClose, courseId }: EnrollmentPopupProps) =>
                   name="age"
                   value={formData.age}
                   onChange={handleChange}
-                  className="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white shadow-sm focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50"
+                  className="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white shadow-sm focus:border-red-500 focus:ring focus:ring-red-500 focus:ring-opacity-50"
                   required
                 />
               </div>
@@ -157,7 +157,7 @@ const EnrollmentPopup = ({ isOpen, onClose, courseId }: EnrollmentPopupProps) =>
 
             <button
               type="submit"
-              className="w-full bg-purple-600 text-white py-3 px-4 rounded-md hover:bg-purple-700 transition-colors"
+              className="w-full bg-red-600 text-white py-3 px-4 rounded-md hover:bg-red-700 transition-colors"
             >
               Submit Enrollment
             </button>
