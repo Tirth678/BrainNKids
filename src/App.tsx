@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { BookOpen, PenTool, Speech, Brain } from 'lucide-react';
 import Navbar from './components/Navbar';
@@ -151,6 +151,12 @@ function App() {
               {isContactFormOpen && <ContactForm />}
             </div>
           </section>
+
+          {/* Enrollment Popup */}
+          <EnrollmentPopup 
+            isOpen={isEnrollmentOpen}
+            onClose={() => setIsEnrollmentOpen(false)}
+          />
 
           {/* Footer */}
           <footer className="bg-white text-black py-8">
