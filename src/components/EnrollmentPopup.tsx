@@ -52,7 +52,8 @@ const EnrollmentPopup = ({ isOpen, onClose, courseId }: EnrollmentPopupProps) =>
   return (
     <>
       <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-        <div className="bg-gray-800 rounded-lg shadow-xl max-w-md w-full relative">
+          <div className="bg-gray-800 rounded-lg shadow-xl max-w-full w-full relative">
+
           <button
             onClick={onClose}
             className="absolute right-4 top-4 text-gray-400 hover:text-white"
@@ -61,7 +62,7 @@ const EnrollmentPopup = ({ isOpen, onClose, courseId }: EnrollmentPopupProps) =>
           </button>
           
           <div className="p-6">
-            <h2 className="text-2xl font-bold text-white mb-6">Book a FREE 3 days Demo Class and Level Test</h2>
+            <h2 className="text-lg md:text-2xl font-bold text-white mb-6">Book a FREE 3 days Demo Class and Level Test</h2>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="studentName" className="block text-sm font-medium text-gray-300">
