@@ -1,6 +1,6 @@
-// import React from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { DivideIcon as LucideIcon } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
 
 interface CourseCardProps {
   id: string;
@@ -9,19 +9,22 @@ interface CourseCardProps {
   icon: React.ComponentType<{ className?: string }>;
 }
 
-const CourseCard = ({ id, title, description, icon: Icon }: CourseCardProps) => {
+const CourseCard: React.FC<CourseCardProps> = ({ id, title, description, icon: Icon }) => {
   return (
-    <div className="bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow border border-gray-800 hover:border-red-500">
+    <div className="bg-gray-800 rounded-lg p-6 hover:bg-gray-700 transition-colors">
       <div className="w-12 h-12 bg-red-900 rounded-lg flex items-center justify-center mb-4">
         <Icon className="h-6 w-6 text-red-400" />
       </div>
-      <h3 className="text-xl font-semibold mb-2 text-white">{title}</h3>
-      <p className="text-gray-300">{description}</p>
+      <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
+      <p className="text-gray-300 mb-4">{description}</p>
       <Link 
         to={`/course/${id}`}
-        className="mt-4 text-red-400 font-medium hover:text-red-300 inline-block"
+        className="text-red-400 hover:text-red-300 font-medium inline-flex items-center"
       >
-        Learn More →
+        Learn More
+        <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
       </Link>
     </div>
   );

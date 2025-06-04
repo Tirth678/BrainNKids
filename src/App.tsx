@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { BookOpen, PenTool, Speech, Brain } from 'lucide-react';
 import Navbar from './components/Navbar';
@@ -8,6 +8,8 @@ import ContactForm from './components/ContactForm';
 import CourseDetails from './components/CourseDetails';
 import EnrollmentPopup from './components/EnrollmentPopup';
 import BranchesPopup from './components/BranchesPopup';
+import CoursesPage from './components/CoursesPage';
+import AboutPage from './components/AboutPage';
 
 export const courses = [
   {
@@ -112,12 +114,10 @@ function App() {
   const [isContactFormOpen, setIsContactFormOpen] = useState(false);
   const [isBranchesOpen, setIsBranchesOpen] = useState(false);
 
-  useEffect(() => {
-    setIsEnrollmentOpen(true); // Open the enrollment popup on page load
-  }, []);
-
   return (
     <Routes>
+      <Route path="/courses" element={<CoursesPage />} />
+      <Route path="/about" element={<AboutPage />} />
       <Route path="/course/:courseId" element={<CourseDetails />} />
       <Route path="/" element={
         <div className="min-h-screen bg-black">
@@ -125,19 +125,45 @@ function App() {
           <Hero />
           
           {/* Courses Section */}
-          <section id="courses" className="py-20 px-4 max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-12 text-white">Our Programs</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {courses.map((course) => (
-                <CourseCard key={course.id} {...course} />
-              ))}
+          <section id="courses" className="py-20 bg-black">
+            <div className="max-w-7xl mx-auto px-4">
+              <h2 className="text-4xl font-bold text-center mb-12 text-white">Our Programs</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {courses.map((course) => (
+                  <CourseCard key={course.id} {...course} />
+                ))}
+              </div>
+              <div className="text-center mt-12">
+                <a 
+                  href="/courses" 
+                  className="inline-block bg-red-600 text-white py-2 px-6 rounded-md hover:bg-red-700 transition-colors"
+                >
+                  View All Programs
+                </a>
+              </div>
             </div>
           </section>
 
           {/* About Section */}
           <section id="about" className="py-20 bg-black">
             <div className="max-w-7xl mx-auto px-4">
-              {/* ... (existing about section content) */}
+              <h2 className="text-4xl font-bold text-center mb-12 text-white">About Us</h2>
+              <div className="bg-gray-800 rounded-lg p-8 mb-12">
+                <h3 className="text-3xl font-bold text-white mb-6 text-center">Our Mission</h3>
+                <p className="text-gray-300 text-lg text-center max-w-3xl mx-auto">
+                  At Brain N Kids, we are committed to nurturing the intellectual and creative potential of every child. 
+                  Through our innovative teaching methods and comprehensive programs, we aim to develop confident, 
+                  capable, and curious learners who are well-prepared for future success.
+                </p>
+              </div>
+              <div className="text-center">
+                <a 
+                  href="/about" 
+                  className="inline-block bg-red-600 text-white py-2 px-6 rounded-md hover:bg-red-700 transition-colors"
+                >
+                  Learn More About Us
+                </a>
+              </div>
             </div>
           </section>
 
@@ -145,7 +171,7 @@ function App() {
           <section id="contact" className="py-20 bg-black">
             <div className="max-w-7xl mx-auto px-4">
               <h2 className="text-4xl font-bold text-center mb-12 text-white">Contact Us</h2>
-              <div className="flex flex-col md:flex-row justify-center gap-4">
+              <div className="flex flex-col md:flex-row justify-center gap-4 mb-12">
                 <button 
                   onClick={() => setIsContactFormOpen(true)} 
                   className="bg-red-600 text-white py-2 px-6 rounded-md hover:bg-red-700 transition-colors"
@@ -159,7 +185,9 @@ function App() {
                   View Our Branches
                 </button>
               </div>
-              {isContactFormOpen && <ContactForm />}
+              <div className="mt-8">
+                {isContactFormOpen && <ContactForm />}
+              </div>
             </div>
           </section>
 
