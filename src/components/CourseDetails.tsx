@@ -1,158 +1,135 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { courses } from '../App';
 import Navbar from './Navbar';
-import { X } from 'lucide-react';
-interface EnrollmentPopupProps {
-  isOpen: boolean;
-  onClose: () => void;
-  courseId?: string;
-}
-const EnrollmentPopup = ({ isOpen, onClose, courseId }: EnrollmentPopupProps) => {
-  const [formData, setFormData] = useState({
-    studentName: '',
-    age: '',
-    sex: 'male',
-    fatherName: '',
-    mobile: '',
-    address: ''
-  });
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Log the form data for now
-    console.log('Form submitted:', formData);
-    console.log('Course ID:', courseId);
-    // Reset form
-    setFormData({
-      studentName: '',
-      age: '',
-      sex: 'male',
-      fatherName: '',
-      mobile: '',
-      address: ''
-    });
-    onClose();
-  };
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-  if (!isOpen) return null;
-  return (
-    <>
-    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-      <div className="bg-gray-800 rounded-lg shadow-xl max-w-md w-full relative">
-        <button
-          onClick={onClose}
-          className="absolute right-4 top-4 text-gray-400 hover:text-white"
-        >
-          <X className="h-6 w-6" />
-        </button>
-        
-        <div className="p-6">
-          <h2 className="text-2xl font-bold text-white mb-6">Student Enrollment</h2>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <label htmlFor="studentName" className="block text-sm font-medium text-gray-300">
-                Student Name
-              </label>
-              <input
-                type="text"
-                id="studentName"
-                name="studentName"
-                value={formData.studentName}
-                onChange={handleChange}
-                className="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white shadow-sm focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50"
-                required
-              />
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <label htmlFor="age" className="block text-sm font-medium text-gray-300">
-                  Age
-                </label>
-                <input
-                  type="number"
-                  id="age"
-                  name="age"
-                  value={formData.age}
-                  onChange={handleChange}
-                  className="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white shadow-sm focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50"
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="sex" className="block text-sm font-medium text-gray-300">
-                  Sex
-                </label>
-                <select
-                  id="sex"
-                  name="sex"
-                  value={formData.sex}
-                  onChange={handleChange}
-                  className="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white shadow-sm focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50"
-                  required
-                >
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
-                </select>
-              </div>
-            </div>
-            <div>
-              <label htmlFor="fatherName" className="block text-sm font-medium text-gray-300">
-                Father's Name
-              </label>
-              <input
-                type="text"
-                id="fatherName"
-                name="fatherName"
-                value={formData.fatherName}
-                onChange={handleChange}
-                className="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white shadow-sm focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50"
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor="mobile" className="block text-sm font-medium text-gray-300">
-                Mobile Number
-              </label>
-              <input
-                type="tel"
-                id="mobile"
-                name="mobile"
-                value={formData.mobile}
-                onChange={handleChange}
-                className="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white shadow-sm focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50"
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor="address" className="block text-sm font-medium text-gray-300">
-                Address
-              </label>
-              <textarea
-                id="address"
-                name="address"
-                value={formData.address}
-                onChange={handleChange}
-                rows={3}
-                className="mt-1 block w-full rounded-md bg-gray-700 border-gray-600 text-white shadow-sm focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50"
-                required
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              className="w-full bg-purple-600 text-white py-3 px-4 rounded-md hover:bg-purple-700 transition-colors"
-            >
-              Submit Enrollment
-            </button>
-          </form>
+import EnrollmentPopup from './EnrollmentPopup';
+
+const CourseDetails = () => {
+  const { courseId } = useParams();
+  const [isEnrollmentOpen, setIsEnrollmentOpen] = useState(false);
+  
+  const course = courses.find(c => c.id === courseId);
+  
+  if (!course) {
+    return (
+      <div className="min-h-screen bg-black text-white">
+        <Navbar />
+        <div className="pt-20 px-4 max-w-7xl mx-auto">
+          <h1 className="text-4xl font-bold text-center">Course not found</h1>
+          <Link to="/" className="mt-4 text-red-400 hover:text-red-300 block text-center">
+            ← Back to Home
+          </Link>
         </div>
       </div>
+    );
+  }
+
+  const Icon = course.icon;
+
+  return (
+    <div className="min-h-screen bg-black text-white">
+      <Navbar />
+      
+      {/* Course Header */}
+      <div className="pt-20 pb-12 px-4 max-w-7xl mx-auto">
+        <div className="flex items-center justify-center mb-8">
+          <div className="w-16 h-16 bg-red-900 rounded-lg flex items-center justify-center">
+            <Icon className="h-8 w-8 text-red-400" />
+          </div>
+        </div>
+        <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">{course.title}</h1>
+        <p className="text-xl text-gray-300 text-center max-w-3xl mx-auto mb-8">{course.description}</p>
+        <div className="flex justify-center">
+          <button
+            onClick={() => setIsEnrollmentOpen(true)}
+            className="bg-red-600 text-white px-8 py-3 rounded-md hover:bg-red-700 transition-colors"
+          >
+            Enroll Now
+          </button>
+        </div>
+      </div>
+
+      {/* Course Details */}
+      <div className="py-12 px-4 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-12">
+          {/* Course Information */}
+          <div className="space-y-8">
+            <div>
+              <h2 className="text-2xl font-semibold mb-4">Course Overview</h2>
+              <p className="text-gray-300 whitespace-pre-line">{course.detailedDescription}</p>
+            </div>
+            
+            <div>
+              <h2 className="text-2xl font-semibold mb-4">Age Group</h2>
+              <p className="text-gray-300">{course.ageGroup}</p>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-semibold mb-4">Program Levels</h2>
+              <ul className="list-disc list-inside text-gray-300 space-y-2">
+                {course.programLevels.map((level, index) => (
+                  <li key={index}>{level}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Skills & Benefits */}
+          <div className="space-y-8">
+            <div>
+              <h2 className="text-2xl font-semibold mb-4">Skills You'll Develop</h2>
+              <div className="grid grid-cols-2 gap-4">
+                {course.skills.map((skill, index) => (
+                  <div key={index} className="bg-gray-800 p-4 rounded-lg">
+                    <p className="text-gray-300">{skill}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-semibold mb-4">Why Choose This Course?</h2>
+              <ul className="space-y-4 text-gray-300">
+                <li className="flex items-start">
+                  <span className="text-red-500 mr-2">•</span>
+                  Expert-led instruction with personalized attention
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-500 mr-2">•</span>
+                  Interactive and engaging learning methods
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-500 mr-2">•</span>
+                  Regular progress assessments and feedback
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-500 mr-2">•</span>
+                  Small batch sizes for better learning outcomes
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Enrollment Popup */}
+      <EnrollmentPopup 
+        isOpen={isEnrollmentOpen}
+        onClose={() => setIsEnrollmentOpen(false)}
+        courseId={courseId}
+      />
+
+      {/* Footer */}
+      <footer className="bg-black text-white py-8 mt-12">
+        <div className="max-w-7xl mx-auto px-4 text-center">
+          <Link to="/" className="text-red-400 hover:text-red-300">
+            ← Back to Home
+          </Link>
+          <p className="mt-4">© 2024 Brain N Kids. All rights reserved. T&Cs applied.</p>
+        </div>
+      </footer>
     </div>
-    </>
   );
 };
-export default EnrollmentPopup;
+
+export default CourseDetails;

@@ -7,6 +7,7 @@ import CourseCard from './components/CourseCard';
 import ContactForm from './components/ContactForm';
 import CourseDetails from './components/CourseDetails';
 import EnrollmentPopup from './components/EnrollmentPopup';
+import BranchesPopup from './components/BranchesPopup';
 
 export const courses = [
   {
@@ -109,6 +110,7 @@ This also identifies the strengths and weakness of a particular person.`,
 function App() {
   const [isEnrollmentOpen, setIsEnrollmentOpen] = useState(false);
   const [isContactFormOpen, setIsContactFormOpen] = useState(false);
+  const [isBranchesOpen, setIsBranchesOpen] = useState(false);
 
   useEffect(() => {
     setIsEnrollmentOpen(true); // Open the enrollment popup on page load
@@ -116,8 +118,9 @@ function App() {
 
   return (
     <Routes>
+      <Route path="/course/:courseId" element={<CourseDetails />} />
       <Route path="/" element={
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-black">
           <Navbar />
           <Hero />
           
@@ -132,22 +135,30 @@ function App() {
           </section>
 
           {/* About Section */}
-          <section id="about" className="py-20 bg-white">
+          <section id="about" className="py-20 bg-black">
             <div className="max-w-7xl mx-auto px-4">
               {/* ... (existing about section content) */}
             </div>
           </section>
 
           {/* Contact Section */}
-          <section id="contact" className="py-20 bg-white">
+          <section id="contact" className="py-20 bg-black">
             <div className="max-w-7xl mx-auto px-4">
-              <h2 className="text-4xl font-bold text-center mb-12 text-black">Contact Us</h2>
-              <button 
-                onClick={() => setIsContactFormOpen(true)} 
-                className="mx-auto block bg-red-600 text-white py-2 px-2 rounded-md hover:bg-red-700 transition-colors"
-              >
-                Open Contact Form
-              </button>
+              <h2 className="text-4xl font-bold text-center mb-12 text-white">Contact Us</h2>
+              <div className="flex flex-col md:flex-row justify-center gap-4">
+                <button 
+                  onClick={() => setIsContactFormOpen(true)} 
+                  className="bg-red-600 text-white py-2 px-6 rounded-md hover:bg-red-700 transition-colors"
+                >
+                  Open Contact Form
+                </button>
+                <button 
+                  onClick={() => setIsBranchesOpen(true)} 
+                  className="bg-gray-700 text-white py-2 px-6 rounded-md hover:bg-gray-600 transition-colors"
+                >
+                  View Our Branches
+                </button>
+              </div>
               {isContactFormOpen && <ContactForm />}
             </div>
           </section>
@@ -158,8 +169,14 @@ function App() {
             onClose={() => setIsEnrollmentOpen(false)}
           />
 
+          {/* Branches Popup */}
+          <BranchesPopup
+            isOpen={isBranchesOpen}
+            onClose={() => setIsBranchesOpen(false)}
+          />
+
           {/* Footer */}
-          <footer className="bg-white text-black py-8">
+          <footer className="bg-black text-white py-8">
             <div className="max-w-7xl mx-auto px-4 text-center">
               <p>© 2024 Brain N Kids. All rights reserved. T&Cs applied.</p>
             </div>
